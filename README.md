@@ -16,14 +16,16 @@ for Xiph codecs.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/libogg-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/libogg-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/libogg-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/libogg-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/libogg-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/libogg-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/libogg-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/libogg-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/libogg-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/libogg-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/libogg-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/libogg-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/libogg/badges/version.svg)](https://anaconda.org/conda-forge/libogg)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/libogg/badges/downloads.svg)](https://anaconda.org/conda-forge/libogg)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-libogg-green.svg)](https://anaconda.org/conda-forge/libogg) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/libogg.svg)](https://anaconda.org/conda-forge/libogg) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/libogg.svg)](https://anaconda.org/conda-forge/libogg) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/libogg.svg)](https://anaconda.org/conda-forge/libogg) |
 
 Installing libogg
 =================
@@ -68,6 +70,7 @@ To manage the continuous integration and simplify feedstock maintenance
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
+For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
 ===========
