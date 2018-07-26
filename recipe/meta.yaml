@@ -12,25 +12,15 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
-  features:
-    - vc9  # [win and py27]
-    - vc10  # [win and py34]
-    - vc14  # [win and py35]
+  number: 1
 
 requirements:
   build:
-    - python  # [win]
     - cmake  # [win]
-    - vc 9  # [win and py27]
-    - vc 10  # [win and py34]
-    - vc 14  # [win and py35]
+    - {{ compiler('c') }}
+  host:
     - pkgconfig  # [unix]
-    - toolchain
   run:
-    - vc 9  # [win and py27]
-    - vc 10  # [win and py34]
-    - vc 14  # [win and py35]
 
 test:
   requires:
@@ -54,7 +44,7 @@ about:
   license_file: COPYING
   summary: "OGG media container"
   description: |
-    OGG media container. This is the native format and the recommended container 
+    OGG media container. This is the native format and the recommended container
     for Xiph codecs.
   doc_url: https://wiki.xiph.org/
 
