@@ -12,7 +12,9 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1001
+  number: 1002
+  run_exports:
+    - {{ pin_subpackage('libogg', max_pin='x.x') }}
 
 requirements:
   build:
@@ -23,12 +25,9 @@ requirements:
   run:
 
 test:
-  requires:
-    - python {{ environ['PY_VER'] + '*' }}  # [win]
   commands:
     - test -f $PREFIX/lib/libogg.a  # [unix]
-    - test -f $PREFIX/lib/libogg.dylib  # [osx]
-    - test -f $PREFIX/lib/libogg.so  # [linux]
+    - test -f $PREFIX/lib/libogg${SHLIB_EXT}  # [unix]
     - test -f $PREFIX/include/ogg/ogg.h  # [unix]
     - test -f $PREFIX/include/ogg/config_types.h  # [unix]
     - test -f $PREFIX/include/ogg/os_types.h  # [unix]
