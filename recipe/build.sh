@@ -1,5 +1,5 @@
 #!/bin/bash
-./configure --prefix=${PREFIX}
+./configure --prefix=${PREFIX} \
             --build=${BUILD}
 make 
 make check
