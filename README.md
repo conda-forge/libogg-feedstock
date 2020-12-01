@@ -5,9 +5,11 @@ Home: https://www.xiph.org/
 
 Package license: BSD3
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/libogg-feedstock/blob/master/LICENSE.txt)
 
 Summary: OGG media container
+
+Documentation: https://wiki.xiph.org/
 
 OGG media container. This is the native format and the recommended container
 for Xiph codecs.
@@ -180,4 +182,5 @@ Feedstock Maintainers
 =====================
 
 * [@dschreij](https://github.com/dschreij/)
+* [@wolfv](https://github.com/wolfv/)
 
