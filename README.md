@@ -14,7 +14,6 @@ Documentation: https://wiki.xiph.org/
 OGG media container. This is the native format and the recommended container
 for Xiph codecs.
 
-
 Current build status
 ====================
 
