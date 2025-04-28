@@ -22,9 +22,12 @@ requirements:
     - ${{ stdlib("c") }}
     - ${{ compiler("c") }}
     - if: win
-      then: cmake
+      then: 
+        - cmake
+        - ninja
     - if: unix
       then:
+        - automake 1.16.*
         - gnuconfig
         - make
         - pkgconfig

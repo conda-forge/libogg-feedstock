@@ -10,6 +10,7 @@ cmake -G "Ninja" ^
 	-DCMAKE_BUILD_TYPE:STRING=Release ^
 	-DINSTALL_DOCS=OFF ^
 	-DBUILD_SHARED_LIBS=1 ^
+	-DCMAKE_POLICY_VERSION_MINIMUM=3.5 ^
 	..
 if errorlevel 1 exit 1
 
