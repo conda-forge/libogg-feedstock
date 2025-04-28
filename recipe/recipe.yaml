@@ -1,0 +1,60 @@
+schema_version: 1
+
+context:
+  name: ogg
+  version: 1.3.5
+
+package:
+  name: lib${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: http://downloads.xiph.org/releases/${{ name }}/lib${{ name }}-${{ version }}.tar.gz
+  sha256: 0eb4b4b9420a0f51db142ba3f9c64b333f826532dc0f48c6410ae51f4799b664
+  patches: 
+    - 001-fix-win32-export-symbols.patch
+
+build:
+  number: 1
+
+requirements:
+  build:
+    - ${{ stdlib("c") }}
+    - ${{ compiler("c") }}
+    - if: win
+      then: 
+        - cmake
+        - ninja
+    - if: unix
+      then:
+        - automake 1.16.*
+        - gnuconfig
+        - make
+        - pkgconfig
+  run_exports:
+    - ${{ pin_subpackage('libogg', upper_bound='x.x') }}
+
+tests:
+  - package_contents:
+      lib:
+        - ogg
+      include: 
+        - ogg/ogg.h
+        - ogg/config_types.h
+        - ogg/os_types.h
+
+about:
+  license: BSD-3-Clause
+  license_file: COPYING
+  summary: OGG media container
+  description: |
+    OGG media container. This is the native format and the recommended container
+    for Xiph codecs.
+  homepage: https://www.xiph.org/
+  documentation: https://wiki.xiph.org/
+
+extra:
+  recipe-maintainers:
+    - dschreij
+    - wolfv
+    - baszalmstra

@@ -1,0 +1,36 @@
+diff --git a/win32/ogg.def b/win32/ogg.def
+index 744d6be..53c58d6 100644
+--- a/win32/ogg.def
++++ b/win32/ogg.def
+@@ -6,6 +6,7 @@ LIBRARY
+ EXPORTS
+ ;
+ oggpack_writeinit
++oggpack_writecheck
+ oggpack_writetrunc
+ oggpack_writealign
+ oggpack_writecopy
+@@ -24,6 +25,7 @@ oggpack_bits
+ oggpack_get_buffer
+ ;
+ oggpackB_writeinit
++oggpackB_writecheck
+ oggpackB_writetrunc
+ oggpackB_writealign
+ oggpackB_writecopy
+@@ -49,6 +51,7 @@ ogg_sync_init
+ ogg_sync_clear
+ ogg_sync_reset
+ ogg_sync_destroy
++ogg_sync_check
+ ogg_sync_buffer
+ ogg_sync_wrote
+ ogg_sync_pageseek
+@@ -62,6 +65,7 @@ ogg_stream_clear
+ ogg_stream_reset
+ ogg_stream_reset_serialno
+ ogg_stream_destroy
++ogg_stream_check
+ ogg_stream_eos
+ ;
+ ogg_page_checksum_set

@@ -14,7 +14,6 @@ Documentation: https://wiki.xiph.org/
 OGG media container. This is the native format and the recommended container
 for Xiph codecs.
 
-
 Current build status
 ====================
 
@@ -72,6 +71,13 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=559&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libogg-feedstock?branchName=main&jobName=win&configuration=win%20win_64_" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_arm64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=559&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libogg-feedstock?branchName=main&jobName=win&configuration=win%20win_arm64_" alt="variant">
                 </a>
               </td>
             </tr>
@@ -203,6 +209,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@baszalmstra](https://github.com/baszalmstra/)
 * [@dschreij](https://github.com/dschreij/)
 * [@wolfv](https://github.com/wolfv/)
 
