@@ -11,18 +11,18 @@ package:
 source:
   url: http://downloads.xiph.org/releases/${{ name }}/lib${{ name }}-${{ version }}.tar.gz
   sha256: 0eb4b4b9420a0f51db142ba3f9c64b333f826532dc0f48c6410ae51f4799b664
-  patches: 
+  patches:
     - 001-fix-win32-export-symbols.patch
 
 build:
-  number: 1
+  number: 2
 
 requirements:
   build:
     - ${{ stdlib("c") }}
     - ${{ compiler("c") }}
     - if: win
-      then: 
+      then:
         - cmake
         - ninja
     - if: unix
@@ -38,7 +38,7 @@ tests:
   - package_contents:
       lib:
         - ogg
-      include: 
+      include:
         - ogg/ogg.h
         - ogg/config_types.h
         - ogg/os_types.h
